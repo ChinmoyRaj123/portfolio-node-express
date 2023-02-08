@@ -4,9 +4,16 @@ const path = require("path")
 const app = express()
 const port = 4000
 
+//to register partilas
 hbs.registerPartials(path.join(__dirname, "../partials"))
 
+//setting view engine to access view folder
 app.set("view engine", "hbs")
+
+//to access static folder i.e public
+app.use(express.static(path.join(__dirname, "../public")))
+
+
 
 app.get('/', (req, res) => {
   res.render("index", { name: "Chinmoy", age: 28 })
