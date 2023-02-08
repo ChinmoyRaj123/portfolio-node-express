@@ -16,11 +16,11 @@ app.use(express.static(path.join(__dirname, "../public")))
 
 
 app.get('/', (req, res) => {
-  res.render("index", { name: "Chinmoy", age: 28 })
+  res.render("index", { name: "Chinmoy", age: 28, title: "My Portfolio" })
 })
 
 app.get('/about', (req, res) => {
-  res.render("about", { sex: "Male", height: "5.10" })
+  res.render("about", { sex: "Male", height: "5.10", title: "My Portfolio" })
 })
 
 app.listen(port, () => {
