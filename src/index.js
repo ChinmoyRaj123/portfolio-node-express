@@ -1,7 +1,10 @@
 const express = require("express")
+const hbs = require("hbs")
 const path = require("path")
 const app = express()
 const port = 4000
+
+hbs.registerPartials(path.join(__dirname, "../partials"))
 
 app.set("view engine", "hbs")
 
